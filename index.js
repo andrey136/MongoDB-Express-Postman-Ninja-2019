@@ -7,8 +7,10 @@ const app = express();
 
 app.use(bodyParser.json());
 
+app.use(express.static('public'));
+
 // connect to mongodb
-mongoose.connect('mongodb://localhost/ninjago');
+mongoose.connect('mongodb+srv://andrey:tripleks@cluster0-sys07.mongodb.net/test');
 mongoose.Promise = global.Promise;
 
 // initialize routes
